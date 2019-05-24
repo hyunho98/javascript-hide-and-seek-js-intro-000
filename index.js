@@ -8,10 +8,12 @@ function nestedTarget() {
 }
 
 function increaseRankBy(n) {
-  const rankedList = document.getElementsByClassName(`ranked-list`);
+  var rankedList = document.getElementByClassName("ranked-list");
+  var number;
   for (var i = 0; i < rankedList.length; i++) {
-    for (var x = 0; x < (rankedList[i].children).length; x++) {
-      (rankedList[i].children[x]).textContent = parseInt((rankedList[i].children[x]).getElementsByTagName(`li`)[x]) + n;
+    number = rankedList[i].getElementsByTagName("li");
+    for (var x = 0; x < number.length; x++) {
+      number[x].textContent = (parseInt(number[x], 10) + n).toString();
     }
   }
 }
