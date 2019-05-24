@@ -17,3 +17,9 @@ function increaseRankBy(n) {
     }
   }
 }
+
+function deepestChild() {
+  var grandNode = document.getElementById("grand-node");
+  var children = grandNode.children;
+  return (children[children.length - 1]).textContent;
+}
